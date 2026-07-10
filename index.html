@@ -1053,7 +1053,7 @@
     <div id="scrollProgress"></div>
 
     <nav>
-        <a class="logo" href="#top"><span class="dot"></span>Trần Thị Lý</a>
+        <a class="logo" href="#top" onclick="goToPageTop(event)"><span class="dot"></span>Trần Thị Lý</a>
         <ul class="nav-links" id="navLinks">
             <li><a href="#about">Giới thiệu</a></li>
             <li><a href="#homework">Bài tập</a></li>
@@ -1249,6 +1249,12 @@
     </div>
 
     <script>
+        function goToPageTop(event) {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            history.replaceState(null, "", `${location.pathname}${location.search}`);
+        }
+
         const detailData = {
             1: {
                 title: "Bài tập 1: Thao tác với tệp tin và thư mục",

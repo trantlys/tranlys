@@ -383,6 +383,34 @@
             border-radius: 4px;
         }
 
+        .photo-click-hint {
+            position: absolute;
+            top: -58px;
+            right: 8px;
+            z-index: 2;
+            padding: 6px 12px;
+            border: 2px solid var(--ink);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .9);
+            box-shadow: 3px 3px 0 var(--ink);
+            font-family: "Baloo 2", sans-serif;
+            font-size: .95rem;
+            font-weight: 800;
+            pointer-events: none;
+        }
+
+        .photo-click-hint::after {
+            content: "↓";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            color: var(--pink);
+            font-size: 2rem;
+            line-height: 1;
+            text-shadow: 1px 1px 0 var(--ink);
+            transform: translateX(-50%);
+        }
+
         .polaroid figcaption {
             margin-top: 10px;
             text-align: center;
@@ -1089,6 +1117,7 @@
                 <figure class="polaroid">
                     <div class="tape"></div>
                     <img src="images/tranthily.jpg" alt="Ảnh cá nhân của Trần Thị Lý">
+                    <span class="photo-click-hint" aria-hidden="true">Click ảnh</span>
                     <figcaption>Ảnh cá nhân</figcaption>
                 </figure>
             </div>

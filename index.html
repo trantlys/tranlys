@@ -359,6 +359,7 @@
         .polaroid-stack {
             position: relative;
             height: clamp(340px, 50vw, 500px);
+            overflow: visible;
         }
 
         .polaroid {
@@ -385,9 +386,9 @@
 
         .photo-click-hint {
             position: absolute;
-            top: -58px;
-            right: 8px;
-            z-index: 2;
+            top: -42px;
+            right: 0;
+            z-index: 10;
             padding: 6px 12px;
             border: 2px solid var(--ink);
             border-radius: 999px;
@@ -1114,10 +1115,10 @@
             </div>
 
             <div class="polaroid-stack">
+                <span class="photo-click-hint" aria-hidden="true">Click ảnh</span>
                 <figure class="polaroid">
                     <div class="tape"></div>
                     <img src="images/tranthily.jpg" alt="Ảnh cá nhân của Trần Thị Lý">
-                    <span class="photo-click-hint" aria-hidden="true">Click ảnh</span>
                     <figcaption>Ảnh cá nhân</figcaption>
                 </figure>
             </div>
